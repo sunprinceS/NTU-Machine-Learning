@@ -39,9 +39,6 @@ class pocketPLA(PLA):
     def __init__(self,dim):
         super().__init__(dim)
 
-    def pla_fit(self,X,y,eta,to_updates):
-        super().fit(X,y,eta,True,to_updates)
-
     def fit(self,X,y,eta,to_updates):
         """
             to_updates: int, max #updates allowed
@@ -63,5 +60,3 @@ class pocketPLA(PLA):
                 min_err = err
 
         self.w = w_opt
-        pred = np.sign(np.dot(X,self.w))
-        err = len(np.where(pred != y)[0])
