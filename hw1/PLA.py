@@ -40,9 +40,6 @@ class pocketPLA(PLA):
         super().__init__(dim)
 
     def fit(self,X,y,eta,to_updates):
-        """
-            to_updates: int, max #updates allowed
-        """
         N = X.shape[0]
 
         w_opt = self.w
