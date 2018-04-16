@@ -53,4 +53,4 @@ def multi_dec_stump(X,y):
                 s = -1
     E_i = min_err / N
 
-    return E_i,theta_opt,d_opt
+    return E_i,theta_opt,d_opt,s
