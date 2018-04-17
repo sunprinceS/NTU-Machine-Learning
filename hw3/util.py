@@ -17,7 +17,7 @@ def feat_transform(X):
     """
     N = X.shape[0]
     x1x2 = np.apply_along_axis(lambda x: x[1]*x[2],1,X)
-    return np.hstack((X,x1x2.reshape(N,1),((X.T)[1]**2).reshape(N,1),((X.T)[2]**2).reshape(N,1)))
+    return np.hstack((X,x1x2.reshape(N,1),(X[:,1]**2).reshape(N,1),(X[:,2]**2).reshape(N,1)))
 
 def gen_data(N):
     X = np.random.uniform(-1,1,(N,2))
